@@ -1,0 +1,26 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./*.html"],
+  theme: {
+    screens : {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px'
+    },
+    extend: {
+      colors: {
+        tomato: 'hsl(4, 100%, 67%)',
+        darkSlateGrey: 'hsl(234, 29%, 20%)',
+        grey: 'hsl(231, 7%, 60%)',
+        white: 'hsl(0, 0%, 100%)'
+
+      },
+      textColor: ['responsive', 'hover', 'focus', 'group-hover'],
+      fontFamily: {
+        Roboto: ['roboto', 'sans-serif'],
+      }, 
+    },
+  },
+  plugins: [],
+}

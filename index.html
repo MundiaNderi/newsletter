@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/src/output.css" rel="stylesheet" />
+    <title>Newsletter sign-up form with success message</title>
+  </head>
+  <body>
+    <div
+      id="card"
+      class="card md:mt-5 rounded bg-white flex flex-col md:flex-row-reverse"
+    >
+      <!--Image-->
+      <div>
+        <img
+          src="/assets/images/illustration-sign-up-mobile.svg"
+          alt="Sign up illustration"
+          class="md:hidden w-full"
+        />
+        <img
+          src="/assets/images/illustration-sign-up-desktop.svg"
+          alt="Sign up illustration"
+          class="hidden md:flex p-10"
+        />
+      </div>
+
+      <!--Details-->
+      <div class="mx-6 py-10 md:py-28 md:p-10">
+        <h1 class="font-bold font-Roboto text-3xl text-darkSlateGrey">
+          Stay Updated!
+        </h1>
+        <p class="font-Roboto py-3">
+          Join 60,000 product managers receiving monthly updates on:
+        </p>
+        <ul>
+          <li class="items-center">
+            <span class="flex items-center pb-3">
+              <img
+                src="/assets/images/icon-list.svg"
+                alt="Success icon"
+                class="pr-3"
+              />
+              Product discovery and building what matters
+            </span>
+          </li>
+          <li>
+            <span class="flex items-center pb-3">
+              <img src="/assets/images/icon-list.svg" class="pr-3" />
+              Measuring to ensure updates are a success
+            </span>
+          </li>
+          <li>
+            <span class="flex items-center">
+              <img
+                src="/assets/images/icon-list.svg"
+                alt="Success icon"
+                class="pr-3"
+              />
+              And much more!
+            </span>
+          </li>
+        </ul>
+
+        <!--Email Submit form-->
+        <div class="py-8">
+          <form id="form">
+            <div class="flex input-group flex-col pb-4">
+              <div class="email flex flex-row justify-between">
+                <label
+                  for="email"
+                  class="pb-3 font-Roboto font-bold text-darkSlateGrey"
+                  >Email address</label
+                >
+                <span
+                  id="email-error"
+                  class="email-error text-tomato font-Roboto"
+                ></span>
+              </div>
+              <input
+                type="text"
+                required
+                id="contact-email"
+                onkeyup="validateEmail()"
+                placeholder="email@company.com"
+                class="border border-grey w-full rounded-md py-4 pl-8"
+              />
+            </div>
+            <button
+              id="subscribe"
+              class="bg-darkSlateGrey text-white w-full py-3 rounded-md"
+            >
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--Success message-->
+    <div
+      id="success"
+      class="bg-white hidden rounded-md success md:mt-44 py-20 md:py-0 w-full md:w-1/3 h-screen p-6 md:h-1/4 flex flex-col"
+    >
+      <div class="py-10">
+        <img src="/assets/images/icon-success.svg" alt="Success icon" />
+      </div>
+      <div class="pb-10">
+        <h1 class="text-darkSlateGrey font-bold text-3xl">
+          Thanks for subscribing!
+        </h1>
+        <p class="pt-4 font-Roboto text-darkSlateGrey">
+          A confirmation email has been sent to
+          <strong>ash@loremcompany.com</strong>. Please open it and click the
+          button inside to confirm your subscription
+        </p>
+      </div>
+      <di class="pb-10">
+        <button
+          id="dismiss"
+          class="bg-tomato w-full py-3 font-Roboto text-white rounded-md"
+        >
+          Dismiss message
+        </button>
+      </di>
+    </div>
+    <script defer src="/main.js"></script>
+  </body>
+</html>
