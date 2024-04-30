@@ -17,6 +17,9 @@ body {
   align-items: center;
 }
 
-.success {
-
+.invalid {
+  background-color: tomato;
+  border: 2px solid tomato;
+  opacity: 0.2;
+  color: tomato;
 }
