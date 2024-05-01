@@ -85,6 +85,7 @@
                 ></span>
               </div>
               <input
+                required
                 type="email"
                 onkeyup="validateEmail()"
                 id="contact-email"
@@ -93,6 +94,7 @@
               />
             </div>
             <button
+              onsubmit="handleSubscribe()"
               id="subscribe"
               class="bg-darkSlateGrey text-white w-full py-3 rounded-md"
             >

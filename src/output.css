@@ -720,14 +720,6 @@ body {
   color: tomato;
 }
 
-.placeholder\:to-tomato::-moz-placeholder {
-  --tw-gradient-to: hsl(4, 100%, 67%) var(--tw-gradient-to-position);
-}
-
-.placeholder\:to-tomato::placeholder {
-  --tw-gradient-to: hsl(4, 100%, 67%) var(--tw-gradient-to-position);
-}
-
 @media (min-width: 768px) {
   .md\:mt-44 {
     margin-top: 11rem;

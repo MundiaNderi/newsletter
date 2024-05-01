@@ -1,21 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const sucessModal = document.getElementById("success");
-  console.log(success)
-
+  const successModal = document.getElementById("success");
   const cardNews = document.getElementById("card");
+  const subscribeButton = document.getElementById("subscribe");
 
-  const subscribeNews = document.getElementById("subscribe");
-
-  subscribeNews.addEventListener("click", function (event) {
+  subscribeButton.addEventListener("click", function (event) {
     event.preventDefault();
+
+    // Validate email
+    if (!validateEmail()) {
+      return; // Exit function if email is invalid
+    }
+
+    // Hide card and show success modal
     cardNews.classList.add("hidden");
-    sucessModal.classList.remove("hidden");
+    successModal.classList.remove("hidden");
   });
 
-
+  // Dismiss the success modal
+  const dismissButton = document.getElementById("dismiss");
+  dismissButton.addEventListener("click", function () {
+    window.location.href = "index.html";
+  });
 });
 
-// Validate the form 
+// Validate email function
 function validateEmail() {
   const emailInput = document.getElementById("contact-email").value.trim();
   const emailError = document.getElementById("email-error");
@@ -30,24 +38,9 @@ function validateEmail() {
   } else {
     emailError.textContent = "";
     const encodedEmail = encodeURIComponent(emailInput);
-    const redirectURL = `index.html?email=${encodedEmail}`; 
+    const redirectURL = `index.html?email=${encodedEmail}`;
     window.history.pushState({ path: redirectURL }, "", redirectURL); // Update the URL
     document.getElementById("subscriber-email").textContent = emailInput;
     return true;
   }
 }
-
-
-// Dismiss the success card
-document.addEventListener('DOMContentLoaded', function () {
-  const urlParams = new URLSearchParams(window.location.search);
-  const userEmail = urlParams.get("email");
-  const dismiss = document.getElementById("success");
-
-  // Display the email on the success page
-  document.getElementById("subscriber-email").textContent = userEmail;
-
-  dismiss.addEventListener("click", function () {
-    window.location.href = "index.html";
-  });
-});
