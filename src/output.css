@@ -571,6 +571,10 @@ video {
   height: 100vh;
 }
 
+.min-h-screen {
+  min-height: 100vh;
+}
+
 .w-full {
   width: 100%;
 }
@@ -585,6 +589,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
@@ -708,9 +716,6 @@ video {
 
 body {
   background-color: hsl(234, 29%, 20%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .invalid {
