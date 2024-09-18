@@ -634,11 +634,6 @@ video {
   padding-bottom: 2.5rem;
 }
 
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -715,7 +710,7 @@ video {
 }
 
 body {
-  background-color: hsl(234, 29%, 20%);
+  background-color: hsl(235, 18%, 26%);
 }
 
 .invalid {
@@ -726,14 +721,6 @@ body {
 }
 
 @media (min-width: 768px) {
-  .md\:mt-44 {
-    margin-top: 11rem;
-  }
-
-  .md\:mt-5 {
-    margin-top: 1.25rem;
-  }
-
   .md\:flex {
     display: flex;
   }
@@ -762,13 +749,13 @@ body {
     padding: 2.5rem;
   }
 
-  .md\:py-0 {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-
   .md\:py-28 {
     padding-top: 7rem;
     padding-bottom: 7rem;
+  }
+
+  .md\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
